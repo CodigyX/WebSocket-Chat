@@ -1,0 +1,151 @@
+body {
+  background-color: #2A3A4F;
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 95vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #324A6A;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.status-select {
+  margin-top: 1rem;
+}
+
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background-color: #3B4A6B;
+  padding: 0.5rem;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.chat-input {
+  display: flex;
+}
+
+.chat-input input {
+  flex: 1;
+}
+
+.message-item {
+  margin-bottom: 0.5rem;
+}
+
+.message-item.private {
+  font-style: italic;
+}
+
+.user-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.user-item .user-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.status-available {
+  background-color: green;
+}
+
+.status-away {
+  background-color: rgb(255, 157, 0);
+}
+
+.status-busy {
+  background-color: red;
+}
+
+/* Mejorar el diseño de los botones */
+button {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.current-user {
+  font-weight: bold;
+  border-left: 5px solid #4A90E2;
+  padding-left: 5px;
+  margin-bottom: 10px; /* Espacio adicional para separarlo de otros usuarios */
+}
+
+/* Estilo para la lista de usuarios */
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Estilo para el contenedor de la barra lateral y el área de chat */
+.container {
+  display: flex;
+  height: 95vh;
+}
+
+/* Estilo para el círculo de disponibilidad */
+.user-status {
+  margin-left: auto; /* Mueve el círculo de estado a la derecha del nombre del usuario */
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+/* Estilo para ocultar el botón */
+.hidden {
+  display: none;
+}
+/* Estilo para el icono de enviar */
+.chat-input button {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.chat-input button i {
+  font-size: 1.2rem;
+}
+
+.chat-input button:hover {
+  background-color: #357ABD;
+}
+

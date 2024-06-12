@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Usuarios</h2>
+      <ul id="user-list"></ul>
+      <div class="status-select">
+        <label for="status">Estado:</label>
+        <select id="status">
+          <option value="available">Disponible</option>
+          <option value="away">Ausente</option>
+          <option value="busy">Ocupado</option>
+        </select>
+      </div>
+      <button id="switchToGeneralChat" class="hidden">Chat General</button>
+    </div>
+    <div class="chat-area">
+      <div class="chat-box" id="general-chat">
+        <div class="chat-header">Chat General</div>
+        <div class="chat-messages" id="general-message-list"></div>
+        <div class="chat-input">
+          <input type="text" id="message" placeholder="Mensaje general...">
+          <button id="sendGeneralButton"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+      <div class="chat-box" id="private-chat" style="display: none;">
+        <div class="chat-header">Chat Privado con <span id="privateChatWith"></span></div>
+        <div class="chat-messages" id="private-message-list"></div>
+        <div class="chat-input">
+          <input type="text" id="private-message" placeholder="Mensaje privado...">
+          <button id="sendPrivateButton"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script src="../js/funciones.js"></script>
+</body>
+</html>
